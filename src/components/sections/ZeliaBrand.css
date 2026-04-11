@@ -30,8 +30,8 @@
 .zelia-btn:hover { opacity: 0.85; }
 
 .zelia-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: #f5f2ed;
+  border: 1px solid #e0d8cd;
   border-radius: var(--radius);
   padding: 2.5rem 2rem;
   display: flex;
@@ -41,25 +41,18 @@
   text-align: center;
 }
 
-.zelia-logo-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.zelia-logo-img-wrap {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.zelia-logo-text {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary);
-  letter-spacing: 0.02em;
-}
-
-.zelia-logo-sub {
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.zelia-logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .zelia-tags {
