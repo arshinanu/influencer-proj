@@ -23,6 +23,18 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
+  cursor: pointer;
+}
+
+@keyframes img-click-pulse {
+  0%   { transform: scale(1);    filter: brightness(1); }
+  30%  { transform: scale(1.07); filter: brightness(1.15); }
+  60%  { transform: scale(0.97); filter: brightness(0.95); }
+  100% { transform: scale(1);    filter: brightness(1); }
+}
+
+.post-img--clicked {
+  animation: img-click-pulse 0.45s ease-out forwards;
 }
 .post-category {
   position: relative;
