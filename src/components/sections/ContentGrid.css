@@ -1,0 +1,35 @@
+.content { background: var(--bg); }
+
+.content-header { text-align: center; margin-bottom: 2rem; }
+
+.content-filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--muted);
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all var(--transition);
+}
+
+.filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+.filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) { .content-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .content-grid { grid-template-columns: 1fr; } }

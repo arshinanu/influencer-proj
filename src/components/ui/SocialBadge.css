@@ -1,0 +1,12 @@
+.social-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+.social-badge:hover { border-color: var(--accent); }
+.social-platform { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.social-handle { font-size: 14px; font-weight: 500; color: var(--primary); }

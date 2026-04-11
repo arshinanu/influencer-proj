@@ -1,0 +1,108 @@
+.hero {
+  padding: 6rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(253, 250, 247, 0.82);
+}
+
+.hero .container { position: relative; z-index: 1; }
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.hero-accent { color: var(--accent); }
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background var(--transition);
+}
+.btn-primary:hover { background: var(--accent); }
+
+.btn-outline {
+  border: 1.5px solid var(--border);
+  color: var(--primary);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color var(--transition), color var(--transition);
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.hero-socials { display: flex; gap: 1.5rem; }
+.hero-socials a { font-size: 13px; color: var(--muted); transition: color var(--transition); }
+.hero-socials a:hover { color: var(--accent); }
+
+.hero-image-wrap { position: relative; }
+
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 60% 40% 55% 45% / 50% 50% 50% 50%;
+  display: block;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 2rem;
+  left: -1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-image-wrap { max-width: 320px; margin: 0 auto; }
+}

@@ -1,0 +1,39 @@
+.about { background: var(--surface); }
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.about-text p { color: var(--muted); font-size: 1rem; }
+
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.about-fact-chip {
+  background: var(--accent-light);
+  color: var(--primary);
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .about-inner { grid-template-columns: 1fr; }
+  .about-photo { max-width: 300px; margin: 0 auto; }
+}

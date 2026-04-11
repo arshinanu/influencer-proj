@@ -1,0 +1,90 @@
+.zelia {
+  background: var(--bg);
+  padding: 5rem 0;
+}
+
+.zelia-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.zelia-text p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.zelia-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity var(--transition);
+}
+.zelia-btn:hover { opacity: 0.85; }
+
+.zelia-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.zelia-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.zelia-logo-text {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+}
+
+.zelia-logo-sub {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.zelia-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.zelia-tags span {
+  background: var(--accent-light);
+  color: var(--primary);
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 50px;
+}
+
+.zelia-ig {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+  transition: opacity var(--transition);
+}
+.zelia-ig:hover { opacity: 0.75; }
+
+@media (max-width: 768px) {
+  .zelia-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
