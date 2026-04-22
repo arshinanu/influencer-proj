@@ -24,7 +24,7 @@ src/
 
 ## Customise
 
-- Replace `Sofia Reyes` with your name in `Navbar.jsx`, `Footer.jsx`, `Hero.jsx`
+- Replace `Roshni Vineeth` with your name in `Navbar.jsx`, `Footer.jsx`, `Hero.jsx`
 - Update stats in `Stats.jsx`
 - Add real posts to `src/data/posts.js`
 - Swap colours in `src/styles/global.css` via CSS variables
