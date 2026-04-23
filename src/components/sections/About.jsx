@@ -1,5 +1,5 @@
 import "./About.css";
-import roshni from "../../assets/roshni.jpg";
+import rosh15 from "../../assets/rosh15.jpeg";
 
 const facts = ["Mom of two boys", "Certified Pastry Chef", "Kerala Kaumudi Best Fashion Creator", "Fashionista"];
 
@@ -8,7 +8,7 @@ export default function About() {
     <section className="about" id="about">
       <div className="container about-inner">
         <div className="about-image-wrap">
-          <img src={roshni} alt="Roshni Vineeth" className="about-photo" />
+          <img src={rosh15} alt="Roshni Vineeth" className="about-photo" />
         </div>
         <div className="about-text">
           <span className="section-label">About Me</span>

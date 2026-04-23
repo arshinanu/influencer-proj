@@ -1,6 +1,6 @@
 import "./Collaborations.css";
 
-const brands = ["Anayra Couture", "Kerala Kaumudi", "SheSight Magazine", "The Media Ant", "HashFame", "Lavonne Academy"];
+const brands = ["Anayra Couture", "Fab India", "W for Women", "Jos Alukkas", "Jayalakshmi", "Horlicks","Milky Bar"];
 
 const testimonials = [
   { brand: "Anayra Couture", quote: "Roshni's authentic voice and elegant styling drove incredible engagement for our saree campaign. A true professional.", person: "Brand Manager" },

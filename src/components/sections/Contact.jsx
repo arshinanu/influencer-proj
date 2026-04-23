@@ -1,15 +1,39 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
+
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSent(true);
+    setSending(true);
+    setError("");
+
+    emailjs
+      .send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        { from_name: form.name, from_email: form.email, message: form.message },
+        EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setSent(true);
+        setSending(false);
+      })
+      .catch(() => {
+        setError("Something went wrong. Please try again.");
+        setSending(false);
+      });
   };
 
   return (
@@ -34,7 +58,10 @@ export default function Contact() {
               <input name="name" placeholder="Your name" value={form.name} onChange={handleChange} required />
               <input name="email" type="email" placeholder="Email address" value={form.email} onChange={handleChange} required />
               <textarea name="message" placeholder="Tell me about your project..." rows={5} value={form.message} onChange={handleChange} required />
-              <button type="submit" className="btn-primary">Send Message</button>
+              {error && <p style={{ color: "red", fontSize: "0.85rem" }}>{error}</p>}
+              <button type="submit" className="btn-primary" disabled={sending}>
+                {sending ? "Sending..." : "Send Message"}
+              </button>
             </form>
           )}
         </div>
