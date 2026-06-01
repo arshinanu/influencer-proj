@@ -1,1 +1,5 @@
 node_modules
+*.MOV
+*.mov
+*.mp4
+*.MP4
