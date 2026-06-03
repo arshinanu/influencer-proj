@@ -11,6 +11,7 @@ import roshni10 from "../assets/roshni10.jpg";
 import roshni11 from "../assets/roshni11.jpg";
 import roshni12 from "../assets/roshni12.jpg";
 import roshni13 from "../assets/roshni13.jpg";
+import roshni14 from "../assets/roshni14.jpg";
 export const posts = [
   { id: 1,  title: "Cadbury Blue Mashru Katan Silk Heritage Banaras Saree",      category: "Fashion",    date: "March 12, 2025", href: "https://www.instagram.com/p/DW05TNwFEo2/?img_index=1", image: roshni2 },
   { id: 2,  title: "Some bonds don’t need words… she is my home in human form",          category: "Fashion",     date: "March 5, 2025",  href: "https://www.instagram.com/p/DWvXD48lDQE/?img_index=1",       image: roshni3 },
@@ -24,4 +25,6 @@ export const posts = [
   { id: 10, title: "Styled to perfection by Signatures by Treesa Josh, where heritage meets contemporary grace.",         category: "Promotions", date: "Jan 8, 2025",    href: "https://www.instagram.com/p/DNxBA2-wmHa/?img_index=1",    image: roshni11 },
   { id: 11, title: "Just another day",             category: "Fashion",    date: "Dec 28, 2024",   href: "https://www.instagram.com/p/DHlNqdmyhJG/?img_index=1",       image: roshni12 },
   { id: 12, title: "Flora – A Summer of Blooms Wear art and be unique this summer.",              category: "Beauty",     date: "Dec 20, 2024",   href: "https://www.instagram.com/p/DHFpNKnRGtl/?img_index=1",       image: roshni13 },
+  { id: 13, title: "Flora – A Summer of Blooms Wear art and be unique this summer.",              category: "Beauty",     date: "Dec 20, 2024",   href: "https://www.instagram.com/p/DZHq6shlOAY/?img_index=1",       image: roshni14 },
+
 ];
