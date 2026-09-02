@@ -18,7 +18,7 @@ const overlays = [
   {
     from: 0.27,
     to: 0.54,
-    label: "135K+ Followers · 37K+ Avg. Reel Views",
+    label: "145+ Followers · 50K+ Avg. Reel Views",
     heading: "A Creator\nYou Can Trust",
   },
   {

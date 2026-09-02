@@ -94,10 +94,12 @@
   transition: all var(--transition);
   letter-spacing: 0.01em;
 }
-.about-chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
+.about-chip:hover { filter: brightness(1.2); }
+
+/* Colored by default (not just on :hover) so touch/mobile visitors see the accent too */
+.about-chip--lime   { border-color: rgba(203, 245, 62, 0.35); color: var(--accent); background: var(--accent-dim); }
+.about-chip--teal   { border-color: rgba(61, 217, 179, 0.35); color: var(--accent-teal); background: var(--accent-teal-dim); }
+.about-chip--purple { border-color: rgba(185, 77, 232, 0.35); color: var(--accent-purple); background: rgba(185, 77, 232, 0.08); }
 
 @media (max-width: 768px) {
   .about-inner { grid-template-columns: 1fr; gap: 3rem; }

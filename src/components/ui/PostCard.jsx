@@ -43,7 +43,15 @@ export default function PostCard({ title, category, date, image, href }) {
       <motion.div className="post-card-glare" style={{ background: glareBg }} />
 
       <div className="post-image">
-        {image && <img src={image} alt={title} className="post-img" />}
+        {image && (
+          <img
+            src={image}
+            alt={title}
+            className="post-img"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
         <span className="post-category">{category}</span>
         <div className="post-image-overlay">
           <a href={href} target="_blank" rel="noreferrer" className="post-overlay-link">

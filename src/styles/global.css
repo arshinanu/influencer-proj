@@ -12,8 +12,10 @@
   --accent-teal: #3dd9b3;
   --accent-teal-dim: rgba(61, 217, 179, 0.08);
   --accent-purple: #b94de8;
-  --muted: #909090;
-  --muted-light: #c8c8c8;
+  /* brightened from #909090/#c8c8c8 — the originals read as low-contrast,
+     especially on mobile screens in daylight */
+  --muted: #a8a8a8;
+  --muted-light: #dcdbd6;
 
   --border: rgba(255, 255, 255, 0.12);
   --border-light: rgba(255, 255, 255, 0.24);

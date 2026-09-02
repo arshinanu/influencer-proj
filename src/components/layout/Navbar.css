@@ -34,20 +34,36 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 0.5rem;
   list-style: none;
 }
 
 .navbar-links > li > a {
+  display: inline-block;
   font-size: 11px;
   font-weight: 500;
   color: var(--muted);
-  transition: color var(--transition);
+  transition: all var(--transition);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  padding: 9px 18px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
 }
 
-.navbar-links > li > a:hover { color: var(--primary); }
+.navbar-links > li > a:hover {
+  color: var(--primary);
+  border-color: var(--border-light);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.navbar-links > li > a:active { transform: scale(0.96); }
+
+.navbar-links > li > a:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  color: var(--primary);
+}
 
 .navbar-cta {
   border: 1px solid var(--border-light) !important;
@@ -89,7 +105,8 @@
 
 @media (max-width: 768px) {
   .navbar-toggle { display: flex; }
-  .navbar--scrolled { background: rgba(8, 8, 8, 0.97); }
+  /* backdrop-filter compositing is expensive on mobile; opaque bg reads the same */
+  .navbar--scrolled { background: rgba(8, 8, 8, 0.97); backdrop-filter: none; -webkit-backdrop-filter: none; }
 
   .navbar-links {
     display: none;
@@ -98,7 +115,6 @@
     left: 0;
     right: 0;
     background: rgba(8, 8, 8, 0.98);
-    backdrop-filter: blur(28px);
     flex-direction: column;
     padding: 2rem;
     border-bottom: 1px solid var(--border);
@@ -108,10 +124,15 @@
   }
 
   .navbar-links.open { display: flex; }
+  .navbar-links > li { width: 100%; }
 
   .navbar-links > li > a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
     font-size: 13px;
     letter-spacing: 0.06em;
+    padding: 13px 20px;
   }
 
   .navbar-cta {

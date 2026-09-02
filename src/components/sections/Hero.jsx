@@ -79,8 +79,10 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          Mom of two boys · Certified pastry chef · Fashionista — making high fashion
-          approachable, one saree at a time.
+          <span className="hero-sub-tag hero-sub-tag--lime">Mom of two boys</span> ·{" "}
+          <span className="hero-sub-tag hero-sub-tag--teal">Certified pastry chef</span> ·{" "}
+          <span className="hero-sub-tag hero-sub-tag--purple">Fashionista</span> — making
+          high fashion approachable, one saree at a time.
         </motion.p>
 
         <motion.div

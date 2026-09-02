@@ -53,7 +53,7 @@ export default function ContentGrid() {
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 300, damping: 28 }}
               >
-                <img src={p.image} alt={p.title} />
+                <img src={p.image} alt={p.title} loading="lazy" decoding="async" />
                 <span className="trending-card-cat">{p.category}</span>
                 <div className="trending-card-shine" />
               </motion.a>

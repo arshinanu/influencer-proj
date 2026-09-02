@@ -101,6 +101,11 @@
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
 }
 
+.hero-sub-tag { font-weight: 600; }
+.hero-sub-tag--lime   { color: var(--accent); }
+.hero-sub-tag--teal   { color: var(--accent-teal); }
+.hero-sub-tag--purple { color: var(--accent-purple); }
+
 .hero-actions {
   display: flex;
   gap: 1.6rem;
@@ -138,4 +143,7 @@
   .hero-center { padding: 6rem 0 5rem; }
   .hero-title { gap: 0 0.16em; }
   .hero-sub { max-width: 100%; }
+
+  /* Animated blurred glows repaint every frame forever — costly on mobile GPUs */
+  .hero-glow { animation: none; }
 }

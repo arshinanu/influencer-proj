@@ -3,6 +3,7 @@ import "./About.css";
 import rosh15 from "../../assets/rosh15.jpeg";
 
 const facts = ["Mom of two boys", "Certified Pastry Chef", "Kerala Kaumudi Best Fashion Creator", "Fashionista"];
+const factAccents = ["lime", "teal", "purple", "lime"];
 
 const ease = [0.22, 1, 0.36, 1];
 const vp = { once: true, amount: 0.25 };
@@ -40,7 +41,13 @@ export default function About() {
           viewport={vp}
         >
           <div className="about-image-accent" />
-          <img src={rosh15} alt="Roshni Vineeth" className="about-photo" />
+          <img
+            src={rosh15}
+            alt="Roshni Vineeth"
+            className="about-photo"
+            loading="lazy"
+            decoding="async"
+          />
           <div className="about-image-badge">
             <span className="about-badge-number">№ 1</span>
             <span className="about-badge-text">Kerala Fashion Creator</span>
@@ -73,8 +80,14 @@ export default function About() {
             whileInView="visible"
             viewport={vp}
           >
-            {facts.map((f) => (
-              <motion.span key={f} className="about-chip" variants={chip}>{f}</motion.span>
+            {facts.map((f, i) => (
+              <motion.span
+                key={f}
+                className={`about-chip about-chip--${factAccents[i % factAccents.length]}`}
+                variants={chip}
+              >
+                {f}
+              </motion.span>
             ))}
           </motion.div>
         </motion.div>

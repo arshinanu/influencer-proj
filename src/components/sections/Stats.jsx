@@ -6,9 +6,9 @@ import roshni7 from "../../assets/roshni7.jpg";
 import roshni8 from "../../assets/roshni8.jpg";
 
 const stats = [
-  { label: "Followers", value: "135K+", accent: "lime" },
-  { label: "Avg. Reel Views", value: "37K+", accent: "teal" },
-  { label: "Total Posts", value: "2700+", accent: "purple" },
+  { label: "Followers", value: "145K+", accent: "lime" },
+  { label: "Avg. Reel Views", value: "50K+", accent: "teal" },
+  { label: "Total Posts", value: "2800+", accent: "purple" },
 ];
 
 const ease = [0.22, 1, 0.36, 1];
@@ -52,14 +52,14 @@ export default function Stats() {
           transition={{ duration: 0.65, ease, delay: 0.3 }}
         >
           <div className="stats-avatars">
-            <img src={roshni5} alt="" className="stats-avatar" />
-            <img src={roshni6} alt="" className="stats-avatar" />
-            <img src={roshni7} alt="" className="stats-avatar" />
-            <img src={roshni8} alt="" className="stats-avatar" />
+            <img src={roshni5} alt="" className="stats-avatar" loading="lazy" decoding="async" />
+            <img src={roshni6} alt="" className="stats-avatar" loading="lazy" decoding="async" />
+            <img src={roshni7} alt="" className="stats-avatar" loading="lazy" decoding="async" />
+            <img src={roshni8} alt="" className="stats-avatar" loading="lazy" decoding="async" />
           </div>
           <div className="stats-community-text">
             <span className="stats-community-label">Community</span>
-            <span className="stats-community-value">135K+ <span>engaged fans</span></span>
+            <span className="stats-community-value">145K+ <span>engaged fans</span></span>
           </div>
         </motion.div>
 
